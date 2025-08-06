@@ -4,20 +4,20 @@ A comprehensive Python client for accessing Edenred España services. This tool 
 
 ## Features
 
-- 🔐 **Secure Authentication**: Full OAuth 2.0 and OTP support
+- 🔐 **Secure Authentication**: Full web authentication with OAuth 2.0 and OTP support
 - 💳 **Card Management**: View balances and status for all your Edenred cards
-- 📊 **Transaction History**: Complete transaction retrieval with pagination
+- 📊 **Transaction History**: Complete transaction retrieval with automatic pagination
 - 📅 **Weekly Spending Tracker**: Calculate weekly spending limits (perfect for restaurant vouchers)
 - 🎯 **Flexible Filtering**: Filter by card type, date ranges, and more
 - 📁 **Multiple Export Formats**: JSON, CSV, and formatted text output
-- 🚀 **Mobile API Support**: Uses captured mobile tokens for enhanced access
+- �️ **Smart Card Detection**: Automatically filters active/inactive cards
 
 ## Installation
 
 1. Clone this repository:
 ```bash
-git clone <repository-url>
-cd edenred
+git clone https://github.com/velascoborja/edenred_spain_python.git
+cd edenred_spain_python
 ```
 
 2. Install dependencies:
@@ -120,11 +120,12 @@ This will show:
 
 ## Architecture
 
-The client uses a hybrid approach:
-1. **Mobile API Priority**: Uses captured mobile tokens for enhanced access
-2. **Web API Fallback**: Falls back to traditional web authentication if mobile fails
+The client uses a comprehensive web-based approach:
+1. **Web Authentication**: Secure login through Edenred's employee portal
+2. **JWT Token Management**: Proper handling of authentication tokens
 3. **Smart Card Detection**: Automatically filters active/inactive cards
 4. **Robust Error Handling**: Graceful handling of authentication and API issues
+5. **Automatic Pagination**: Retrieves all transactions across multiple pages
 
 ## Security Features
 
